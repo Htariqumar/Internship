@@ -1,0 +1,415 @@
+/* ================================
+   RESET
+================================ */
+* { margin: 0;
+   padding: 0;
+    box-sizing: border-box; }
+
+/* ================================
+   VARIABLES
+================================ */
+:root {
+  --sidebar-bg: #111c3a; 
+  --sidebar-text: #ffffff;
+  --sidebar-muted: #a4b3cd;
+  --accent: #3b82f6; 
+  --track-bg: #22345e;
+  --main-bg: #ffffff;
+  --text-dark: #1f2937;
+  --text-muted: #4b5563;
+  --border-color: #94a3b8; 
+  --font-main: 'Poppins', sans-serif;
+}
+
+body { 
+  font-family: var(--font-main); 
+  color: var(--text-dark); 
+  background-color: #f3f4f6;
+  -webkit-font-smoothing: antialiased;
+}
+
+hr { border: none; }
+
+/* ================================
+   MAIN LAYOUT
+================================ */
+.cv-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--main-bg);
+  
+}
+.sidebar { flex: 0 0 28%;
+   background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+     padding: 35px 25px; }
+
+.main-content { flex: 1;
+   background-color: var(--main-bg);
+    padding: 45px 40px; }
+
+/* ================================
+   PROFILE 
+================================ */
+.profile { text-align: left;
+   margin-bottom: 30px; }
+
+.profile-photo {
+  width: 90%;
+  max-width: 90%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1px;     
+  margin-bottom: 20px;
+  display: block;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.profile-title {
+  color: #3b82f6;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;  
+}
+
+/* ================================
+   SECTION TITLES 
+================================ */
+.section { margin-bottom: 20px; }
+
+.section-title, .main-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 3px;   
+}
+
+.section-title { 
+  font-size: 14.5px;
+   letter-spacing: 0.5px; }
+.main-title { font-size: 20px; 
+  letter-spacing: 0.3px;
+   gap: 10px; }
+
+.icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  background-color: var(--accent);
+  border-radius: 3px;     
+  font-size: 15.5px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.main-title .icon-box {
+  background-color: #3b82f6;
+}
+
+.title-text { white-space: nowrap; }
+
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 38px;             
+  bottom: 0;
+  width: 160px;
+  height: 1px;
+  background-color: rgba(255,255,255,0.18);
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  left: 36px;             
+  bottom: 0;
+  width: 300px;
+  height: 2px;
+  background-color: var(--border-color);
+}
+
+/* ================================
+   SIDEBAR SECTION DIVIDERS 
+================================ */
+.sidebar-divider {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin: 5.5px 0;
+  width: 87%;
+}
+
+/* ================================
+   CONTACT LIST
+================================ */
+.contact-list { 
+  list-style: none;
+ }
+.contact-list li {
+   display: flex; 
+   align-items: center;
+    gap: 18px;
+     font-size: 12px; 
+     color: var(--sidebar-muted); 
+     margin-bottom: 5px; 
+     word-break: break-all; }
+.contact-list i {
+   width: 16px; 
+  color: var(--sidebar-muted);
+   text-align: center; }
+
+/* ================================
+   SKILLS
+================================ */
+.skill-group-title { font-size: 11.5px; font-weight: 700; letter-spacing: 1px; color: var(--sidebar-muted); margin: 10px 0 8px; }
+.skill-group-title:first-of-type { margin-top: 0; }
+
+.skill-item { margin-bottom: 9px; }
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 10.5px;
+  margin-bottom: 1px;
+}
+
+.skill-label span:last-child { font-size: 11px; color: var(--sidebar-muted); }
+
+.skill-bar {
+  position: relative;
+  width: 86%;
+  height: 4px;
+  background-color: var(--track-bg);
+  border-radius: 2px;
+  overflow: visible;
+}
+
+.skill-fill {
+  position: relative;
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+
+.skill-fill::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 50%;
+  transform: translateY(-50%) translateZ(0);  
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 0;
+  backface-visibility: hidden;                
+}
+
+/* ================================
+   EDUCATION
+================================ */
+.edu-item { padding-bottom: 7px; margin-bottom: 7px; border-bottom: 1px solid rgba(255,255,255,0.12);width: 87%; }
+.edu-item.no-border { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.edu-item h3 { font-size: 13px; font-weight: 700; margin-bottom: 5px; letter-spacing: 0.2px; }
+.edu-date { font-size: 12px; color: var(--sidebar-muted); margin-bottom: 1px; }
+.edu-school { font-size: 12px; color: #d1d4dc; }
+
+/* ================================
+   LANGUAGES 
+================================ */
+.lang-row { display: flex;
+   justify-content: space-between; 
+  padding-top: 5px;
+  }
+.lang-item { text-align: center; flex: 1; }
+
+.lang-ring {
+  --pct: 0;
+  width: 65px;
+  height: 68px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(var(--accent) calc(var(--pct) * 1%), var(--track-bg) 0);
+  position: relative;
+}
+
+.lang-ring::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--sidebar-bg);
+}
+
+.lang-ring span { position: relative; font-size: 11.5px; font-weight: 500; z-index: 1; }
+.lang-item p { font-size: 10px; color: var(--sidebar-muted); }
+
+/* ================================
+   MAIN CONTENT SECTIONS
+================================ */
+.section-main { margin-bottom: 35px; }
+
+.summary-text { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+
+.section-divider { border-top: 1px solid var(--border-color); margin: 23px 0; }
+
+/* ================================
+   WORK EXPERIENCE TIMELINE
+================================ */
+.timeline { position: relative; padding-top: 4px; }
+
+
+.timeline-left {
+  flex: 0 0 100px;
+  font-size: 11px;
+  color: #000;
+  line-height: 1.4;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.timeline-left::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 14px;           
+  bottom: -27px;        
+  width: 1px;
+  background-color: var(--border-color);
+}
+
+.timeline-item.last .timeline-left::before {
+  display: none;        
+}
+.timeline-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.timeline-item.last { margin-bottom: 0; }
+
+.timeline-left {
+  flex: 0 0 100px;
+  font-size: 11px;
+  color: #000;
+  line-height: 1.4;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.timeline-marker {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #c3c7d1;  
+  background-color: #fff;      
+  margin-bottom: 4px;
+  position: absolute;
+  left: 0;                
+  top: 2px; 
+  z-index: 1;
+}
+
+.timeline-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  text-align: center;       
+  white-space: nowrap;
+}
+
+.timeline-divider {
+  flex: 0 0 1px;
+  background-color: var(--border-color);   
+}
+
+.timeline-content { flex: 1; min-width: 0; }
+.timeline-content h3 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.timeline-company { color: var(--accent); font-size: 12px; font-weight: 600; margin-bottom: 9px; }
+.timeline-content ul { 
+  padding-left: 0; 
+  list-style-position: inside;  
+}
+.timeline-content li { font-size: 12px; color: var(--text-muted); margin-bottom: 1px; }
+
+/* ================================
+   FEATURED PROJECTS
+================================ */
+.projects-grid { display: flex; gap: 15px; }
+
+.project-card {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;         
+  overflow: hidden;
+  padding-bottom: 14px;
+}
+
+.project-card img { width: 100%; height: 100px; object-fit: cover; display: block; }
+.project-card h3 { font-size: 13px; font-weight: 700; margin: 12px 14px 6px; }
+.project-card p { font-size: 12px; color: var(--text-muted); margin: 0 14px 8px; line-height: 1.5; }
+.project-tech { color: var(--accent) !important; font-weight: 600; }
+
+/* ================================
+   ACHIEVEMENTS
+================================ */
+.achievements-grid { display: flex; gap: 6px; margin-bottom: 20px;}
+
+.achievement-card {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 14px 10px;
+}
+
+.achievement-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+.achievement-icon.gold { color: #f0a63a; }
+.achievement-icon.blue { color: #4f5fce; }
+.achievement-icon.red { color: #e25555; }
+
+.achievement-card h3 { font-size: 13px; font-weight: 700; margin-bottom: 5px; line-height: 1.35; }
+.achievement-card p { font-size: 12px; color: var(--text-muted); line-height: 1.35; }
+
+/* ================================
+   REFERENCES
+================================ */
+.references-grid { display: flex; gap: 30px; }
+.reference-card { flex: 1; display: flex; gap: 14px; align-items: flex-start; }
+.reference-card img { width: 55px; height: 55px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.reference-card h3 { font-size: 13px; font-weight: 700; margin-bottom: 1px; }
+.reference-card p { font-size: 12px; color: var(--text-muted); margin-bottom: 2px; }
+.ref-role { color: var(--accent) !important; font-weight: 600; }
+.ref-company { font-weight: 500; color: var(--text-dark) !important; }
+
+
