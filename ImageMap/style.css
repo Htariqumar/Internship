@@ -1,0 +1,47 @@
+.board {
+  position: relative;
+  width: 400px; /* or whatever size you want */
+}
+
+.board img {
+  display: block;
+  width: 100%;
+}
+
+.hotspot {
+  position: absolute;
+  display: block;
+}
+
+.hotspot:hover {
+  outline: 2px solid orange;
+  background: rgba(255, 165, 0, 0.15);
+}
+
+/* info box, hidden by default */
+.info {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 14px 18px;
+  width: 260px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+}
+
+/* show the info box only when its id matches the URL hash */
+.info:target {
+  display: block;
+}
+
+.info .close {
+  float: right;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
