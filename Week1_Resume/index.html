@@ -6,39 +6,44 @@
   <title>Hafsa Tariq - CV</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="cv-container">
+  <div class="actions-wrapper">
+    <button id="download-btn" class="download-btn" onclick="downloadResume()">
+      <i class="fa-solid fa-file-pdf"></i> Save as PDF
+    </button>
+  </div>
 
-    <!-- LEFT SIDEBAR -->
+  <div id="cv-element" class="cv-container">
+
     <aside class="sidebar">
 
-      <!-- PROFILE -->
       <div class="profile">
         <img src="images/profile.jpg" alt="Hafsa Tariq" class="profile-photo">
         <h1 class="profile-name">Hafsa Tariq</h1>
-        <p class="profile-title">SENIOR FRONTEND DEVELOPER</p>
+        <p class="profile-title">SOFTWARE DEVELOPER</p>
       </div>
 
-      <!-- CONTACT -->
       <div class="section contact-section">
         <h2 class="section-title"><span class="icon-box"><i class="fa-solid fa-address-card"></i></span><span class="title-text">CONTACT</span></h2>
         <ul class="contact-list">
-          <li><i class="fa-solid fa-phone"></i> +92 300 1234567</li>
+          <li><i class="fa-solid fa-phone"></i> +92 308 5976680</li>
           <li><i class="fa-solid fa-envelope"></i> htariqumar@example.com</li>
           <li><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan</li>
-          <li><i class="fa-solid fa-globe"></i> www.hafsa.dev</li>
           <li><i class="fa-brands fa-linkedin"></i> linkedin.com/in/hafsatariq</li>
         </ul>
       </div>
       <hr class="sidebar-divider">
 
-      <!-- SKILLS -->
       <div class="section skills-section">
         <h2 class="section-title"><span class="icon-box"><i class="fa-solid fa-gear"></i></span><span class="title-text">SKILLS</span></h2>
 
@@ -61,7 +66,6 @@
       </div>
       <hr class="sidebar-divider">
 
-      <!-- EDUCATION -->
       <div class="section education-section">
         <h2 class="section-title"><span class="icon-box"><i class="fa-solid fa-graduation-cap"></i></span><span class="title-text">EDUCATION</span></h2>
         <div class="edu-item">
@@ -77,7 +81,6 @@
       </div>
       <hr class="sidebar-divider">
 
-      <!-- LANGUAGES -->
       <div class="section languages-section">
         <h2 class="section-title"><span class="icon-box"><i class="fa-solid fa-globe"></i></span><span class="title-text">LANGUAGES</span></h2>
         <div class="lang-row">
@@ -98,16 +101,13 @@
 
     </aside>
 
-    <!-- RIGHT MAIN CONTENT -->
     <main class="main-content">
 
-      <!-- PROFESSIONAL SUMMARY -->
       <div class="section-main">
         <h2 class="main-title"><span class="icon-box"><i class="fa-solid fa-user"></i></span><span class="title-text">PROFESSIONAL SUMMARY</span></h2>
-        <p class="summary-text">Results-driven Frontend Developer with 3+ years of experience building responsive, user-centered web applications. Proficient in modern JavaScript frameworks and pixel-perfect UI development. Passionate about writing clean code and delivering exceptional user experiences.</p>
+        <p class="summary-text">Computer Science undergraduate at Comsats University with hands-on experience in OOP , Data Structures , database management system, coputer networks, artificial intelligence. Delivered five end to end acdemic software projects spanning C++,Java , Python, and full-stack development. Eager to contribute strong problem-solving skills and passion for technology to  a dynamic software engineering role.</p>
       </div>
 
-      <!-- WORK EXPERIENCE -->
       <div class="section-main">
         <h2 class="main-title"><span class="icon-box"><i class="fa-solid fa-briefcase"></i></span><span class="title-text">WORK EXPERIENCE</span></h2>
 
@@ -115,34 +115,17 @@
           <div class="timeline-item">
             <div class="timeline-left">
               <span class="timeline-marker"></span>
-              <div class="timeline-date"><strong>Jan 2023</strong><br>–<br><strong>Present</strong></div>
+              <div class="timeline-date"><strong>July 2026</strong><br>–<br><strong>Present</strong></div>
             </div>
             <div class="timeline-divider"></div>
             <div class="timeline-content">
-              <h3>SENIOR FRONTEND DEVELOPER</h3>
-              <p class="timeline-company">TechDevs Solutions (Pvt.) Ltd.</p>
+              <h3>Mern Stack Intern</h3>
+              <p class="timeline-company">Codinity Solution</p>
               <ul>
-                <li>Developed and maintained complex web applications using React.js and Next.js.</li>
-                <li>Collaborated with UI/UX designers to implement pixel-perfect designs.</li>
-                <li>Optimized components for maximum performance and scalability.</li>
-                <li>Mentored junior developers and conducted code reviews.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-left">
-              <span class="timeline-marker"></span>
-              <div class="timeline-date"><strong>Jun 2021</strong><br>–<br><strong>Dec 2022</strong></div>
-            </div>
-            <div class="timeline-divider"></div>
-            <div class="timeline-content">
-              <h3>FRONTEND DEVELOPER</h3>
-              <p class="timeline-company">SoftLogics (Pvt.) Ltd.</p>
-              <ul>
-                <li>Built responsive websites and dashboards using HTML, CSS, JavaScript, and React.</li>
-                <li>Integrated RESTful APIs and third-party services.</li>
-                <li>Improved application performance and fixed cross-browser issues.</li>
+                <li>working on full-stack web development using MERN Stack(MongoDB,Express.js,React.js,Node.js).</li>
+                <li>Assisting in building and integrating RESTful APIs for company projects .</li>
+                <li>Collaborating with development team on debugging and feature implementation.</li>
+                <li>Gaining hands-on experience with Git/GitHub and agile workflows.</li>
               </ul>
             </div>
           </div>
@@ -150,16 +133,16 @@
           <div class="timeline-item last">
             <div class="timeline-left">
               <span class="timeline-marker"></span>
-              <div class="timeline-date"><strong>Jan 2021</strong><br>–<br><strong>May 2021</strong></div>
+              <div class="timeline-date"><strong>June 2026</strong></div>
             </div>
             <div class="timeline-divider"></div>
             <div class="timeline-content">
-              <h3>JUNIOR FRONTEND DEVELOPER (INTERNSHIP)</h3>
-              <p class="timeline-company">DevPulse</p>
+              <h3>LeaderShip and Volunteer training Program</h3>
+              <p class="timeline-company">Al-Khidmat Foundation, Lahore.</p>
               <ul>
-                <li>Assisted in developing and maintaining web applications.</li>
-                <li>Converted Figma designs into responsive HTML/CSS.</li>
-                <li>Learned modern frontend technologies and best practices.</li>
+                <li>Completed 8 days leadership and community service training covering teamwork, first aid, and disaster response.</li>
+                <li>participated in community outreach, including a volunteer visit to Fountain house to engage with underprivileged communities.</li>
+                <li>Presented a macro-project as part of program's final leadership showcase.</li>
               </ul>
             </div>
           </div>
@@ -167,87 +150,94 @@
       </div>
       <hr class="section-divider">
 
-      <!-- FEATURED PROJECTS -->
       <div class="section-main">
         <h2 class="main-title"><span class="icon-box"><i class="fa-solid fa-folder-open"></i></span><span class="title-text">FEATURED PROJECTS</span></h2>
         <div class="projects-grid">
-          <div class="project-card">
-            <img src="images/project1.jpg" alt="CRM Dashboard">
-            <h3>CRM DASHBOARD</h3>
-            <p>A complete CRM dashboard with analytics, charts, and user management.</p>
-            <p class="project-tech">React.js, Redux, Tailwind CSS</p>
+          <div class="project-card" onclick="openProject('https://weather-application-wheat-pi.vercel.app','Weather Application')">
+            <img src="images/project1.jpg" alt="Weather Application">
+            <h3>Weather Application</h3>
+            <p class="project-desc">A responsive weather app that fetches real-time data from a weather API, showing live temperature, humidity, and multi-day forecasts for any searched city.</p>
+            <p class="project-tech">JavaScript, HTML, CSS, Weather API</p>
           </div>
-          <div class="project-card">
-            <img src="images/project2.jpg" alt="E-Commerce Store">
-            <h3>E-COMMERCE STORE</h3>
-            <p>Full-featured online store with product listing, cart, checkout, and payment integration.</p>
-            <p class="project-tech">Next.js, Stripe, Tailwind CSS</p>
+          <div class="project-card" onclick="openProject('https://git-hub-profile-finder-flame-one.vercel.app','GitHub Profile Finder')">
+            <img src="images/project2.jpg" alt="GitHub Profile Finder">
+            <h3>GitHub Profile Finder</h3>
+            <p class="project-desc">A search tool that queries the GitHub REST API by username and displays profile details, public repositories, followers, and following counts.</p>
+            <p class="project-tech">JavaScript, GitHub REST API, HTML, CSS</p>
           </div>
-          <div class="project-card">
-            <img src="images/project3.jpg" alt="Portfolio Website">
-            <h3>PORTFOLIO WEBSITE</h3>
-            <p>Personal portfolio website to showcase projects, skills, and experience.</p>
-            <p class="project-tech">HTML, CSS, JavaScript</p>
+          <div class="project-card" onclick="openProject('https://json-place-holder-virid.vercel.app','JSON-Placeholder Dashboard')">
+            <img src="images/project3.jpg" alt="JSON-Placeholder Dashboard">
+            <h3>JSON-Placeholder Dashboard</h3>
+            <p class="project-desc">A dashboard that fetches posts and comments from the JSONPlaceholder REST API and displays the mock data in a clean, organized layout.</p>
+            <p class="project-tech">JavaScript, REST API, Fetch, HTML, CSS</p>
+          </div>
+        </div>
+        <p class="back-to-cv-hint"><i class="fa-solid fa-circle-info"></i> Click any project to preview it right here, with a button to return to your resume.</p>
+      </div>
+
+      <div id="project-overlay" class="project-overlay">
+        <div class="project-overlay-bar">
+          <button class="back-btn" onclick="closeProject()"><i class="fa-solid fa-arrow-left"></i> Back to Resume</button>
+          <span id="project-overlay-title" class="project-overlay-title"></span>
+          <a id="project-overlay-newtab" class="newtab-btn" href="#" target="_blank" rel="noopener noreferrer">Open in New Tab <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <iframe id="project-overlay-frame" class="project-overlay-frame" src="" title="Project preview"></iframe>
+      </div>
+
+      <div class="section-main">
+        <h2 class="main-title"><span class="icon-box"><i class="fa-solid fa-trophy"></i></span><span class="title-text">ACHIEVEMENTS</span></h2>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <i class="fa-solid fa-trophy achievement-icon gold"></i>
+            <div class="achievement-text">
+              <h3>Python Programming</h3>
+              <p>Udemy <br>2023</p>
+            </div>
+          </div>
+          <div class="achievement-card">
+            <i class="fa-solid fa-medal achievement-icon gold"></i>
+            <div class="achievement-text">
+              <h3>CCNA Networks 2026</h3>
+              <p>CISCO Networing Academy</p>
+            </div>
+          </div>
+          <div class="achievement-card">
+            <i class="fa-solid fa-paintbrush achievement-icon blue"></i>
+            <div class="achievement-text">
+              <h3>CANVA certified</h3>
+              <p>creative craftsman<br>2025</p>
+            </div>
+          </div>
+          <div class="achievement-card">
+            <i class="fa-solid fa-certificate achievement-icon red"></i>
+            <div class="achievement-text">
+              <h3>CERTIFICATE OF EXCELLENCE</h3>
+              <p>HRCA Pakistan<br>2022</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- ACHIEVEMENTS -->
-<div class="section-main">
-  <h2 class="main-title"><span class="icon-box"><i class="fa-solid fa-trophy"></i></span><span class="title-text">ACHIEVEMENTS</span></h2>
-  <div class="achievements-grid">
-    <div class="achievement-card">
-      <i class="fa-solid fa-trophy achievement-icon gold"></i>
-      <div class="achievement-text">
-        <h3>BEST EMPLOYEE OF THE YEAR</h3>
-        <p>TechDevs Solutions<br>2023</p>
-      </div>
-    </div>
-    <div class="achievement-card">
-      <i class="fa-solid fa-medal achievement-icon gold"></i>
-      <div class="achievement-text">
-        <h3>TOP PERFORMER Q2 2023</h3>
-        <p>TechDevs Solutions</p>
-      </div>
-    </div>
-    <div class="achievement-card">
-      <i class="fa-solid fa-code achievement-icon blue"></i>
-      <div class="achievement-text">
-        <h3>HACKATHON WINNER</h3>
-        <p>DevFest Lahore<br>2022</p>
-      </div>
-    </div>
-    <div class="achievement-card">
-      <i class="fa-solid fa-certificate achievement-icon red"></i>
-      <div class="achievement-text">
-        <h3>CERTIFICATE OF EXCELLENCE</h3>
-        <p>SoftLogics<br>2022</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <!-- REFERENCES -->
       <div class="section-main">
         <h2 class="main-title"><span class="icon-box"><i class="fa-solid fa-users"></i></span><span class="title-text">REFERENCES</span></h2>
         <div class="references-grid">
           <div class="reference-card">
-            <img src="images/ref1.jpg" alt="Usman Arshad">
+            <img src="images/ref1.jpg" alt="Ayyaz Muhammad">
             <div>
-              <h3>Usman Arshad</h3>
-              <p class="ref-role">Technical Manager</p>
-              <p class="ref-company">TechDevs Solutions</p>
-              <p>usman.arshad@techdevs.com</p>
+              <h3>Ayyaz Muhammad</h3>
+              <p class="ref-role">Acdemic Incharge</p>
+              <p class="ref-company">Punjab University</p>
+              <p>ayyaz@gmail.com</p>
               <p>+92 321 7654321</p>
             </div>
           </div>
           <div class="reference-card">
-            <img src="images/ref2.jpg" alt="Haseeb Ahmed">
+            <img src="images/ref2.jpg" alt="Tahir Umar">
             <div>
-              <h3>Haseeba Ahmed</h3>
-              <p class="ref-role">CTO</p>
-              <p class="ref-company">SoftLogics (Pvt.) Ltd.</p>
-              <p>haseeb.ahmed@softlogics.com</p>
+              <h3>Tahir Umar</h3>
+              <p class="ref-role">Manager</p>
+              <p class="ref-company">Standpharm (Pvt.) Ltd.</p>
+              <p>TahirUmar@standpharm.com</p>
               <p>+92 300 9876543</p>
             </div>
           </div>
@@ -257,6 +247,53 @@
     </main>
 
   </div>
+
+  <script>
+    function openProject(url, title) {
+      document.getElementById('project-overlay-frame').src = url;
+      document.getElementById('project-overlay-title').textContent = title;
+      document.getElementById('project-overlay-newtab').href = url;
+      document.getElementById('project-overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProject() {
+      document.getElementById('project-overlay').classList.remove('active');
+      document.getElementById('project-overlay-frame').src = '';
+      document.body.style.overflow = '';
+    }
+
+    function downloadResume() {
+      const element = document.getElementById('cv-element');
+      const btn = document.getElementById('download-btn');
+
+      btn.style.display = 'none';
+      window.scrollTo(0, 0);
+
+      html2canvas(element, {
+        scale: 2, // High resolution crisp scaling
+        useCORS: true,
+        scrollX: 0,
+        scrollY: 0,
+        windowWidth: element.scrollWidth,
+        windowHeight: element.scrollHeight
+      }).then(canvas => {
+        const imgData = canvas.toDataURL('image/jpeg', 1.0);
+        const { jsPDF } = window.jspdf;
+
+        const pdf = new jsPDF({
+          orientation: canvas.width > canvas.height ? 'landscape' : 'portrait',
+          unit: 'px',
+          format: [canvas.width, canvas.height] // Matches canvas sizing automatically
+        });
+
+        pdf.addImage(imgData, 'JPEG', 0, 0, canvas.width, canvas.height);
+        pdf.save('Hafsa_Tariq_CV.pdf'); // Updated file output naming target
+
+        btn.style.display = 'flex';
+      });
+    }
+  </script>
 
 </body>
 </html>
